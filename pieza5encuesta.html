@@ -31,6 +31,15 @@ Released under the MIT license: http://jsbin.mit-license.org
 	height: 100%;
 }
 </style>
+<style>
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+	background-color: white;
+    padding: 0px;
+}
+</style>
   <title>Pieza 5 Encuesta</title>
 
 </head>
@@ -42,10 +51,8 @@ Released under the MIT license: http://jsbin.mit-license.org
 <div class="responsivo">
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfaxtYBhwypimUUKQbcMsEXglra4TJrBLAUrUM8S3Ucn1Ekxw/viewform?embedded=true" width="640" height="6111" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 </div>
-<div id="body" align="center">
+<div id="container" class="sticky" align="center">
 <h2>Al terminar de llenar la encuesta, favor de pulsar el botón para seguir</h2>
-</div>
-<div id="container" class="container" align="center">
   <div class="btn-group btn-group-lg">
        <a href="pieza5samples.html" class="btn btn-dark">SEGUIR</a>
    </div>

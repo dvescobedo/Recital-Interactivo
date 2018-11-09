@@ -73,7 +73,7 @@ $(document).ready(function(){
   });
   
   $('#stop').click(function(){
-    sound.stop();
+    sound.fade(1, 0, 1000);
   });
   
     var sound1 = new Howl({
@@ -91,7 +91,7 @@ $(document).ready(function(){
   });
   
   $('#stop1').click(function(){
-    sound1.stop();
+    sound1.fade(1, 0, 1000);
   });
   
  

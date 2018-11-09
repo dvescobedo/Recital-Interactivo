@@ -76,7 +76,7 @@ var sound2 = new Howl({
   });
   
   $('#stop2').click(function(){
-    sound2.stop();
+    sound2.fade(1, 0, 1000);
   });
   
     var sound3 = new Howl({
@@ -94,7 +94,7 @@ var sound2 = new Howl({
   });
   
   $('#stop3').click(function(){
-    sound3.stop();
+    sound3.fade(1, 0, 1000);
   });
   
       var sound4 = new Howl({
@@ -112,7 +112,7 @@ var sound2 = new Howl({
   });
   
   $('#stop4').click(function(){
-    sound4.stop();
+    sound4.fade(1, 0, 1000);
   });
    
 }); // end of ready

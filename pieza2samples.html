@@ -64,11 +64,16 @@ $(document).ready(function(){
 var sound2 = new Howl({
     
     src: ['Pieza2Sample1.mp3'],
+	onfade: () => {
+		sound.stop();
+		
+	},
   
   }); // end of sound declaration/assignment
   
   $('#play2').click(function(){
     sound2.play();
+	sound2.volume(1);
   });
   
   $('#pause2').click(function(){
@@ -87,6 +92,7 @@ var sound2 = new Howl({
   
   $('#play3').click(function(){
     sound3.play();
+	sound3.volume(1);
   });
   
   $('#pause3').click(function(){
@@ -105,6 +111,7 @@ var sound2 = new Howl({
   
   $('#play4').click(function(){
     sound4.play();
+	sound4.volume(1);
   });
   
   $('#pause4').click(function(){

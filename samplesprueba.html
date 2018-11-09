@@ -61,11 +61,16 @@ $(document).ready(function(){
   var sound = new Howl({
     
     src: ['pruebasample.mp3'],
+	onfade: () => {
+		sound.stop();
+		
+	},
   
   }); // end of sound declaration/assignment
   
   $('#play').click(function(){
     sound.play();
+	sound.volume(1);
   });
   
   $('#pause').click(function(){

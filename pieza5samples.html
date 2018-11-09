@@ -62,11 +62,15 @@ $(document).ready(function(){
     var sound12 = new Howl({
     
     src: ['pieza5sample1.mp3'],
-  
+  onfade: () => {
+		sound.stop();
+		
+	},
   }); // end of sound declaration/assignment
   
   $('#play12').click(function(){
     sound12.play();
+	sound12.volume(1);
   });
   
   $('#pause12').click(function(){
@@ -85,6 +89,7 @@ $(document).ready(function(){
   
   $('#play13').click(function(){
     sound13.play();
+	sound13.volume(1);
   });
   
   $('#pause13').click(function(){
@@ -103,6 +108,7 @@ $(document).ready(function(){
   
   $('#play14').click(function(){
     sound14.play();
+	sound14.volume(1);
   });
   
   $('#pause14').click(function(){

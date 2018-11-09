@@ -85,14 +85,14 @@ $(document).ready(function(){
     
     src: ['pieza1sample2.mp3'],
   	onfade: () => {
-		sound.stop();
+		sound1.stop();
 		
 	},
   }); // end of sound declaration/assignment
   
   $('#play1').click(function(){
     sound1.play();
-	sound.volume(1);
+	sound1.volume(1);
   });
   
   $('#pause1').click(function(){

@@ -19,26 +19,92 @@ Released under the MIT license: http://jsbin.mit-license.org
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
-  <title>JS Bin</title>
+
+  <title>Pieza 1 Samples</title>
 
 </head>
 <body>
-<div id="body" align="center">
-<h2>Recital Interactivo</h2>
-<audio autoplay controls>
-   <source src="take2.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-<div class="container" align="center"><h5><font color="red">↑↑↑Favor de reproducir el audio↑↑↑</font></h5></div>
 
-<h4>Para empezar la prueba, favor de pulsar el botón siguiente
-</h4>
-<div id="container2" class="container" align="center">
-   <br>
-    <div class="btn-group btn-group-lg">
-       <a href="encuestaprueba.html" class="btn btn-dark">PRUEBA</a>
+<div id="body" align="center">
+<h3>Recital Interactivo</h3>
+<h4>Pieza 1 Intercombinable</h4>
+</div>
+<div id="container" class="container" align="center">
+  <div class="btn-group btn-group-lg">
+       <button id = "play" class="btn btn-primary">PLAY</button>
+      <button  id = "stop" class="btn btn-primary">STOP</button>
+   </div>
+     <div class="btn-group btn-group-lg">
+       <button id = "play1" class="btn btn-success">PLAY</button>
+      <button  id = "stop1" class="btn btn-success">STOP</button>
    </div>
 </div>
+<br>
+<br>
+<div id="body" align="center">
+<h4>Al terminar la Pieza 1, favor de pulsar el botón para seguir con el programa</h4>
+</div>
+<div id="container" class="container" align="center">
+  <div class="btn-group btn-group-lg">
+       <a href="pieza2samples.html" class="btn btn-dark">SEGUIR</a>
+   </div>
 
+</div>
+<br>
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/howler.js/2.0.0/howler.js"></script>
+
+<script id="jsbin-javascript">
+$(document).ready(function(){
+  
+  
+  var sound = new Howl({
+    
+    src: ['pieza1sample1.mp3'],
+	onfade: () => {
+		sound.stop();
+		
+	},
+  
+  }); // end of sound declaration/assignment
+  
+  $('#play').click(function(){
+    sound.play();
+	sound.volume(1);
+  });
+  
+  $('#pause').click(function(){
+    sound.pause();
+  });
+  
+  $('#stop').click(function(){
+    sound.fade(1, 0, 1000);
+  });
+  
+    var sound1 = new Howl({
+    
+    src: ['pieza1sample2.mp3'],
+  	onfade: () => {
+		sound1.stop();
+		
+	},
+  }); // end of sound declaration/assignment
+  
+  $('#play1').click(function(){
+    sound1.play();
+	sound1.volume(1);
+  });
+  
+  $('#pause1').click(function(){
+    sound1.pause();
+  });
+  
+  $('#stop1').click(function(){
+    sound1.fade(1, 0, 1000);
+  });
+  
+ 
+}); // end of ready
+</script>
 </body>
 </html>

@@ -15,7 +15,6 @@ Released under the MIT license: http://jsbin.mit-license.org
  <meta name="apple-mobile-web-app-capable" content="yes">
  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
  <script src="dist/howler.js"></script>
- <script src="dist/NoSleep.min.js"></script>
  <link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -54,22 +53,7 @@ Released under the MIT license: http://jsbin.mit-license.org
 <br>
   <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
   <script src="https://cdn.jsdelivr.net/howler.js/2.0.0/howler.js"></script>
-<script id="nosleep">
-var noSleep = new NoSleep();
 
-function enableNoSleep() {
-  noSleep.enable();
-  document.removeEventListener('touchstart', enableNoSleep, false);
-}
-
-// Enable wake lock.
-// (must be wrapped in a user input event handler e.g. a mouse or touch handler)
-document.addEventListener('touchstart', enableNoSleep, false);
-
-// Disable wake lock at some point in the future.
-// (does not need to be wrapped in any user input event handler)
-noSleep.disable();
-</script>
 <script id="jsbin-javascript">
 $(document).ready(function(){
   

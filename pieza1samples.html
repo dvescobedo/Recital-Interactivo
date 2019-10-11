@@ -47,29 +47,31 @@ Released under the MIT license: http://jsbin.mit-license.org
 </div>
 <div id="container" class="container" align="center">
   <div class="btn-group btn-group-lg">
-       <a href="pieza2samples.html" class="btn btn-dark">SEGUIR</a>
+       <a id="salida" href="pieza2samples.html" class="btn btn-dark">SEGUIR</a>
    </div>
 
 </div>
 <br>
   <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
   <script src="https://cdn.jsdelivr.net/howler.js/2.0.0/howler.js"></script>
+  
 <script id="nosleep">
 var noSleep = new NoSleep();
 
 function enableNoSleep() {
   noSleep.enable();
-  document.removeEventListener('touchstart', enableNoSleep, false);
 }
 
 // Enable wake lock.
 // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
 document.addEventListener('touchstart', enableNoSleep, false);
 
-// Disable wake lock at some point in the future.
-// (does not need to be wrapped in any user input event handler)
-noSleep.disable();
+
+
 </script>
+
+
+
 <script id="jsbin-javascript">
 $(document).ready(function(){
   
